@@ -24,10 +24,11 @@ const BtnStyled = styled.button`
 interface ButtonDefaultProps {
   label: string;
   type: 'button' |  'submit' | 'reset';
+  children?: React.ReactNode;
 }
 
-function ButtonDefaultStyled({ type, label }: ButtonDefaultProps) {
-  return <BtnStyled type={type}>{label}</BtnStyled>;
+function ButtonDefaultStyled({ type, label, children }: ButtonDefaultProps) {
+  return <BtnStyled type={type}>{label}{children}</BtnStyled>;
 }
 
 export default ButtonDefaultStyled;
